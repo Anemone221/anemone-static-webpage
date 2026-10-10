@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anemone221 · EVE Online</title>
+  <meta name="description" content="Live EVE Online and zKillboard status, useful EVE links, and MCO — a desktop tool for managing large rosters of EVE characters.">
+  <meta name="theme-color" content="#0b0f17">
+  <link rel="icon" type="image/png" href="assets/mco.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">Anemone221</a>
+      <nav class="nav">
+        <a href="#status">Status</a>
+        <a href="#links">Links</a>
+        <a href="#mco">MCO</a>
+        <a href="lp-conversion/">LP Conversion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Capsuleer dashboard</h1>
+      <p class="lede">Whether Tranquility and zKillboard are up right now, links I use every day, and the tools I build for EVE Online.</p>
+    </section>
+
+    <!-- ─────────── Status ─────────── -->
+    <section id="status" class="section">
+      <div class="section-head">
+        <h2>Status</h2>
+        <div class="section-meta">
+          <span id="updated">Checking…</span>
+          <button id="refresh" class="btn-ghost" type="button">Refresh</button>
+        </div>
+      </div>
+
+      <div class="status-grid">
+        <!-- EVE status page -->
+        <article class="card status-card" id="card-eve">
+          <header class="card-head">
+            <span class="dot" data-state="loading"></span>
+            <div>
+              <h3>EVE Online</h3>
+              <a class="sub" href="https://status.eveonline.com/" target="_blank" rel="noopener">status.eveonline.com</a>
+            </div>
+          </header>
+          <p class="headline" data-field="headline">Loading…</p>
+          <ul class="components" data-field="components"></ul>
+          <div class="notices" data-field="notices"></div>
+        </article>
+
+        <!-- Tranquility via ESI -->
+        <article class="card status-card" id="card-tq">
+          <header class="card-head">
+            <span class="dot" data-state="loading"></span>
+            <div>
+              <h3>Tranquility</h3>
+              <span class="sub">Live server data from ESI</span>
+            </div>
+          </header>
+          <p class="headline" data-field="headline">Loading…</p>
+          <dl class="stats">
+            <div><dt>Pilots online</dt><dd data-field="players">—</dd></div>
+            <div><dt>Up since</dt><dd data-field="uptime">—</dd></div>
+            <div><dt>Server version</dt><dd data-field="version">—</dd></div>
+          </dl>
+          <p class="fine">Daily downtime starts at 11:00 UTC.</p>
+        </article>
+
+        <!-- zKillboard -->
+        <article class="card status-card" id="card-zkill">
+          <header class="card-head">
+            <span class="dot" data-state="loading"></span>
+            <div>
+              <h3>zKillboard</h3>
+              <a class="sub" href="https://zkillboard.com/" target="_blank" rel="noopener">zkillboard.com</a>
+            </div>
+          </header>
+          <p class="headline" data-field="headline">Loading…</p>
+          <dl class="stats">
+            <div><dt>Newest killmail</dt><dd data-field="latest">—</dd></div>
+            <div><dt>Recent killmails</dt><dd data-field="count">—</dd></div>
+            <div><dt>ISK in that batch</dt><dd data-field="isk">—</dd></div>
+          </dl>
+          <p class="fine">If no new killmails arrive for 30 minutes, the feed is marked as stale.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────── Links ─────────── -->
+    <section id="links" class="section">
+      <div class="section-head"><h2>Links</h2></div>
+      <div class="link-grid">
+        <a class="card link-card" href="https://www.eveonline.com/" target="_blank" rel="noopener">
+          <span class="link-title">EVE Online</span>
+          <span class="link-desc">The official site: news, patch notes, and account management.</span>
+          <span class="link-url">eveonline.com</span>
+        </a>
+        <a class="card link-card" href="https://discord.com/invite/eveonline" target="_blank" rel="noopener">
+          <span class="link-title">EVE Online Discord</span>
+          <span class="link-desc">CCP's official Discord server for EVE Online.</span>
+          <span class="link-url">discord.gg/eveonline</span>
+        </a>
+        <a class="card link-card" href="https://wiki.eveuniversity.org/" target="_blank" rel="noopener">
+          <span class="link-title">EVE University Wiki</span>
+          <span class="link-desc">The best general reference for game mechanics, fitting, and guides.</span>
+          <span class="link-url">wiki.eveuniversity.org</span>
+        </a>
+        <a class="card link-card" href="https://zkillboard.com/" target="_blank" rel="noopener">
+          <span class="link-title">zKillboard</span>
+          <span class="link-desc">Killmails, ship losses, and PvP statistics.</span>
+          <span class="link-url">zkillboard.com</span>
+        </a>
+        <a class="card link-card" href="https://pleaseignore.app/" target="_blank" rel="noopener">
+          <span class="link-title">pleaseignore.app</span>
+          <span class="link-desc">TEST Alliance auth and services.</span>
+          <span class="link-url">pleaseignore.app</span>
+        </a>
+        <a class="card link-card" href="https://www.fuzzwork.co.uk/lpstore/" target="_blank" rel="noopener">
+          <span class="link-title">LP Conversion</span>
+          <span class="link-desc">Fuzzwork's LP store calculator: ISK per LP for each corporation's store offers.</span>
+          <span class="link-url">fuzzwork.co.uk/lpstore</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ─────────── MCO ─────────── -->
+    <section id="mco" class="section">
+      <div class="section-head"><h2>MCO: Massive Character Organization</h2></div>
+      <article class="card mco">
+        <img class="mco-icon" src="assets/mco.png" alt="MCO app icon" width="128" height="128">
+        <div class="mco-body">
+          <p class="mco-lede">A desktop app for EVE players who run a <em>lot</em> of characters. It works for 10 or more and is designed around 90+. It tracks the whole roster outside the game: who's training what, which account is idle, who can fly a given fit, where everyone is parked, which clones hold which implants, and which blueprints you own.</p>
+          <ul class="mco-points">
+            <li><strong>Fits:</strong> paste an EFT fit to see how many of your characters can fly it and what the rest are missing.</li>
+            <li><strong>Location:</strong> find the cyno alt nearest to a system, by gate jumps or light years, with jump clones included.</li>
+            <li><strong>Accounts:</strong> get warned when an Omega account has nobody training.</li>
+            <li><strong>Local-only:</strong> everything lives in one SQLite file on your machine. There's no server, no account, and nothing is uploaded.</li>
+          </ul>
+          <p class="fine">Windows, macOS, and Linux · Free and open source (MIT) · Unofficial and not affiliated with CCP.</p>
+          <div class="actions">
+            <a class="btn" href="https://github.com/Anemone221/MCO" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-secondary" href="https://github.com/Anemone221/MCO/releases" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>EVE Online and all related logos and designs are trademarks or registered trademarks of CCP ehf. This site is not affiliated with or endorsed by CCP.</p>
+      <p>Status data: <a href="https://status.eveonline.com/">status.eveonline.com</a>, <a href="https://esi.evetech.net/">ESI</a>, and <a href="https://zkillboard.com/">zKillboard</a>.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
