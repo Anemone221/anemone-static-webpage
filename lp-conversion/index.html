@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LP Conversion · Anemone221</title>
-  <meta name="description" content="LP conversion notes for EVE Online.">
+  <meta name="description" content="Step-by-step guide to converting CONCORD LP and donating LP to a corporation in EVE Online.">
   <meta name="theme-color" content="#0b0f17">
   <link rel="icon" type="image/png" href="../assets/mco.png">
   <link rel="stylesheet" href="../assets/style.css">
@@ -25,11 +25,128 @@
   <main class="wrap">
     <section class="hero">
       <h1>LP Conversion</h1>
-      <p class="lede">Coming soon.</p>
+      <p class="lede">How to turn CONCORD LP into another corporation&rsquo;s LP at a station LP store, then transfer it to a corporation from your wallet.</p>
     </section>
 
-    <!-- Put images in lp-conversion/images/ and reference them like:
-         <img src="images/example.png" alt="Describe the image"> -->
+    <nav class="card guide-toc" aria-label="Guide contents">
+      <ol>
+        <li><a href="#convert">Convert CONCORD LP at the LP store</a></li>
+        <li><a href="#check">Check your LP balances</a></li>
+        <li><a href="#donate">Donate LP to a corporation</a></li>
+      </ol>
+    </nav>
+
+    <!-- ─────────── Part 1 ─────────── -->
+    <section id="convert" class="section">
+      <div class="section-head"><h2>1. Convert CONCORD LP</h2></div>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step-text">
+            <h3>Open the Loyalty Point Store</h3>
+            <p>Dock at a station belonging to the corporation whose LP you want (here, <strong>Imperial Chancellor</strong>). In the station services panel, click the <strong>Loyalty Point Store</strong> icon.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/1.station_menu.png"><img src="images/1.station_menu.png" width="269" height="322" loading="lazy" alt="Station services panel for Imperial Chancellor with the Loyalty Point Store icon highlighted in red."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Click &ldquo;Exchange LPs&rdquo;</h3>
+            <p>The store opens on the station owner&rsquo;s tab. Click <strong>Exchange LPs</strong> at the top right.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/2.lp_window.png"><img src="images/2.lp_window.png" width="834" height="576" loading="lazy" alt="Loyalty Point Store window on the Imperial Chancellor tab showing 0 Loyalty Points, with the Exchange LPs button highlighted."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Choose an amount and confirm</h3>
+            <p>The <strong>LP Exchange Dialog</strong> shows the exchange rate (in this example, <strong>0.80</strong> Imperial Chancellor LP for each CONCORD LP). Enter the <strong>Purchase Amount</strong> you want to receive.</p>
+            <p>Under CONCORD, <strong>Cost</strong> is how much CONCORD LP will be spent and <strong>Remaining</strong> is what&rsquo;s left afterwards. Click <strong>OK</strong> to exchange.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/3.conversion_window.png"><img src="images/3.conversion_window.png" width="297" height="390" loading="lazy" alt="LP Exchange Dialog: purchase 41,770 Imperial Chancellor LP at 0.80 per CONCORD LP, costing 52,213 CONCORD LP with 469,912 remaining."></a>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ─────────── Part 2 ─────────── -->
+    <section id="check" class="section">
+      <div class="section-head"><h2>2. Check your LP balances</h2></div>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step-text">
+            <h3>Open the LP section of your wallet</h3>
+            <p>Open your <strong>Wallet</strong> (My Wallet tab) and click the <strong>LP Corporations</strong> tile.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/4.wallet_window_lp.png"><img src="images/4.wallet_window_lp.png" width="1377" height="147" loading="lazy" alt="Wallet window showing ISK, PLEX, and the LP Corporations tile highlighted."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Find the corporation</h3>
+            <p>The <strong>Overview</strong> tab lists every corporation you hold LP with, your balance, and the closest LP store for each. Your newly converted LP should appear here.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/5.lp_list.png"><img src="images/5.lp_list.png" width="679" height="249" loading="lazy" alt="LP Overview list: CONCORD, Tribal Liberation Force, Republic Fleet, DED and Imperial Chancellor with balances and nearest LP stores."></a>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ─────────── Part 3 ─────────── -->
+    <section id="donate" class="section">
+      <div class="section-head"><h2>3. Donate LP to a corporation</h2></div>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step-text">
+            <h3>Pick who to transfer to</h3>
+            <p>Switch to the <strong>Donate</strong> tab. In <strong>Transfer To</strong>, type the recipient&rsquo;s name (for example, <strong>221st Support Group</strong>) and select it from the results.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/6.donate_window.png"><img src="images/6.donate_window.png" width="743" height="300" loading="lazy" alt="Donate tab with 221st Support Group entered in the Transfer To field."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Choose the LP and amount</h3>
+            <p>Select the <strong>Corporation</strong> whose LP you&rsquo;re sending (the one you just converted into), enter the <strong>Amount</strong>, then click <strong>Transfer</strong>.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/7.donate_window_2.png"><img src="images/7.donate_window_2.png" width="702" height="232" loading="lazy" alt="Transfer form for 221st Support Group with Imperial Chancellor selected and an amount of 100."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Confirm the transfer</h3>
+            <p>Double-check the amount, LP corporation and recipient in the prompt, then click <strong>Yes</strong>.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/8.confirmation_window.png"><img src="images/8.confirmation_window.png" width="420" height="254" loading="lazy" alt="Are you sure? prompt: transfer 100 Imperial Chancellor Loyalty Points to 221st Support group, with Yes and No buttons."></a>
+          </figure>
+        </li>
+
+        <li class="step">
+          <div class="step-text">
+            <h3>Done</h3>
+            <p>&ldquo;<strong>Transfer Successful</strong>&rdquo; appears next to the button once the LP has been sent.</p>
+          </div>
+          <figure class="shot">
+            <a href="images/9.confirmation.png"><img src="images/9.confirmation.png" width="345" height="84" loading="lazy" alt="Transfer Successful message next to the Transfer button."></a>
+          </figure>
+        </li>
+      </ol>
+    </section>
   </main>
 
   <footer class="site-footer">

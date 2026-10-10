@@ -155,6 +155,35 @@ a.sub:hover { color: var(--accent); }
 .btn-secondary { background: transparent; color: var(--text); border-color: var(--border); }
 .btn-secondary:hover { background: transparent; border-color: var(--accent); }
 
+/* ── Guide ── */
+.guide-toc ol { margin: 0; padding-left: 20px; }
+.guide-toc li { margin: 4px 0; }
+
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 16px; }
+.step {
+  counter-increment: step;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px; align-items: start;
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;
+}
+.step-text h3 { margin: 0 0 8px; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+.step-text h3::before {
+  content: counter(step);
+  flex: none; display: inline-grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--accent-2); color: #fff; font-size: 0.85rem; font-weight: 700;
+}
+.step-text p { margin: 0 0 8px; color: var(--muted); }
+.step-text p:last-child { margin-bottom: 0; }
+.step-text strong { color: var(--text); font-weight: 600; }
+
+.shot { margin: 0; justify-self: center; max-width: 100%; }
+.shot a { display: block; }
+.shot img {
+  display: block; max-width: 100%; height: auto;
+  border: 1px solid var(--border); border-radius: 6px; background: var(--bg-2);
+}
+.shot a:hover img { border-color: var(--accent); }
+
 /* ── Footer ── */
 .site-footer { margin-top: 32px; padding: 24px 0 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
 .site-footer p { margin: 4px 0; }
@@ -167,6 +196,10 @@ a.sub:hover { color: var(--accent); }
   .nav a { font-size: 0.85rem; white-space: nowrap; }
   .mco { flex-direction: column; }
   .mco-icon { width: 80px; height: 80px; border-radius: 16px; }
+}
+
+@media (max-width: 760px) {
+  .step { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
 }
 
 @media (max-width: 420px) {
